@@ -27,13 +27,12 @@
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "env": {
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/airbnb"
+      "plugin:vue/essential"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
