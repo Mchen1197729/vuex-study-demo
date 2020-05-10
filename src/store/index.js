@@ -13,8 +13,8 @@ const socket = io('ws://localhost:3000');
 
 function createWebSocketPlugin(socket) {
   return store => {
-    socket.on('connect', data => {
-      console.log('client socket connect', data);
+    socket.on('connect', () => {
+      console.log('client socket connect', socket.id);
     });
     socket.on('data', user => {
       store.commit('moduleUser/receive_data', user);
