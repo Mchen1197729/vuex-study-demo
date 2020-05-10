@@ -29,7 +29,7 @@ export default {
     ]
   },
   mutations: {
-    [GET_RANDOM_NUMBER](state, { number }) {
+    [GET_RANDOM_NUMBER](state, {number}) {
       //在store创建一个新的响应式的属性
       Vue.set(state.todoUser, 'age', number);
     },
@@ -39,11 +39,11 @@ export default {
   },
   actions: {
     //异步action的写法
-    someAsyncAction({ commit }) {
+    someAsyncAction({commit}) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           const number = Math.floor((Math.random() + 1) * 10);
-          commit(GET_RANDOM_NUMBER, { number });
+          commit(GET_RANDOM_NUMBER, {number});
           if (number % 2 === 0) {
             resolve(number);
           } else {
