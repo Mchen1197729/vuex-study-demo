@@ -36,6 +36,15 @@ function createWebSocketPlugin(socket) {
 
 const plugin = createWebSocketPlugin(socket);
 
+/*
+* lazyload in vuex/Module
+* */
+
+// const store = new Vuex.Store({})
+// import('./moduleTodo')
+//   .then(moduleTodo => {
+//     store.registerModule('moduleTodo', moduleTodo)
+//   })
 export default new Vuex.Store({
   plugins: [plugin],
   modules: {
